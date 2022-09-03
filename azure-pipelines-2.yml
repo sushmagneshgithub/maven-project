@@ -5,6 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 jobs:
 - job: job1
+  dependsOn: job2
   steps:
   - script: echo Job1 - Hello, world! Changed
     displayName: 'Run a one-line script'
@@ -14,7 +15,7 @@ jobs:
       echo See https://aka.ms/yaml
     displayName: 'Run a multi-line scripts'
 - job: job2
-  dependsOn: job1
+
   steps:
   - script: echo Job2
     displayName: 'Run a one-line script'
