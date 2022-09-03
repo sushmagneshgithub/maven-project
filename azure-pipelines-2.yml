@@ -11,7 +11,7 @@ stages:
       - bash: echo Build First Job
     - job: SecondJob
       steps:
-      - bash: echo Build Second Job $(environment)
+      - bash: echo Build Second Job 
 - stage: DevDeploy
   variables:
     environment: Dev
